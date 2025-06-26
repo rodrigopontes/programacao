@@ -1,0 +1,159 @@
+<section id="editorial-html-structure">
+  <style>
+    #editorial-html-structure {
+      padding: 4rem 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border-radius: 1.2rem;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+    #editorial-html-structure h2 {
+      font-size: 2.4rem;
+      color: #111827;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    #editorial-html-structure h3 {
+      font-size: 1.6rem;
+      color: #1e293b;
+      border-left: 4px solid #3b82f6;
+      padding-left: 0.8rem;
+      margin: 2rem 0 1rem;
+    }
+    #editorial-html-structure p {
+      font-size: 1.125rem;
+      color: #334155;
+      margin: 0.75rem 0;
+      text-align: justify;
+    }
+    #editorial-html-structure ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    #editorial-html-structure li {
+      margin: 0.3rem 0;
+    }
+    #editorial-html-structure code {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 0.1rem 0.3rem;
+      border-radius: 0.2rem;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+    #editorial-html-structure .example-box {
+      background: #0f172a;
+      padding: 1.2rem;
+      border-radius: 0.5rem;
+      color: #e2e8f0;
+      overflow-x: auto;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+      font-size: 0.95rem;
+      margin: 1.5rem 0;
+    }
+    #editorial-html-structure .highlight-btn {
+      background: #2563eb;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto 0;
+      transition: background 0.3s ease;
+    }
+    #editorial-html-structure .highlight-btn:hover {
+      background: #1d4ed8;
+    }
+    #editorial-html-structure .highlight {
+      background: #22c55e !important;
+      color: #f0fdf4 !important;
+    }
+    #editorial-html-structure .caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+  </style>
+
+  <h2>🔍 Entendendo a Estrutura Padrão de um Site HTML</h2>
+
+  <p>
+    Quando criamos um site, tudo começa com um simples arquivo <code>.html</code>. Por mais que ele possa evoluir e ficar sofisticado, a estrutura básica sempre será a mesma — uma estrutura que dá suporte a todo o conteúdo que você e o usuário final vão ver.
+  </p>
+
+  <p>
+    Esta estrutura segue o padrão da própria linguagem HTML e funciona como a “coluna vertebral” da sua página. Sem ela, o navegador não consegue interpretar corretamente o que está sendo apresentado. Vamos analisar peça por peça e ver como isso funciona:
+  </p>
+
+  <h3>1️⃣ O que significa <code>&lt;!DOCTYPE html&gt;</code>?</h3>
+  <p>
+    Logo no início do arquivo, declaramos o tipo do documento com <code>&lt;!DOCTYPE html&gt;</code>. Isso informa ao navegador que ele vai lidar com um documento HTML5 — a versão moderna da linguagem. Isso garante que o conteúdo será renderizado seguindo os padrões mais recentes.
+  </p>
+
+  <h3>2️⃣ A tag <code>&lt;html&gt;</code> e o atributo <code>lang</code></h3>
+  <p>
+    Depois da declaração <code>&lt;!DOCTYPE&gt;</code>, abrimos a tag raiz <code>&lt;html&gt;</code>, que envolve absolutamente todo o conteúdo da página. Ela geralmente inclui o atributo <code>lang</code> para indicar o idioma da página (por exemplo, <code>pt-BR</code> para Português Brasileiro), o que ajuda mecanismos de busca e ferramentas de acessibilidade.
+  </p>
+
+  <h3>3️⃣ O cabeçalho invisível: <code>&lt;head&gt;</code></h3>
+  <p>
+    Tudo que vai entre <code>&lt;head&gt;...&lt;/head&gt;</code> não aparece visualmente para o usuário, mas é indispensável. Nele colocamos:
+  </p>
+  <ul>
+    <li><code>&lt;meta charset="UTF-8"&gt;</code> — garante que os acentos e caracteres funcionem.</li>
+    <li><code>&lt;title&gt;</code> — o título que aparece na aba do navegador.</li>
+    <li>Links para CSS, scripts externos, ícones, configurações de viewport e metadados para redes sociais.</li>
+  </ul>
+
+  <h3>4️⃣ O conteúdo visível vai dentro do <code>&lt;body&gt;</code></h3>
+  <p>
+    Tudo que o visitante enxerga (textos, imagens, vídeos, links e botões) precisa estar dentro da tag <code>&lt;body&gt;</code>. Você pode organizar isso com cabeçalhos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>), parágrafos (<code>&lt;p&gt;</code>), seções (<code>&lt;section&gt;</code>), divs e muitos outros elementos que compõem a estrutura e o layout.
+  </p>
+
+  <h3>⚙️ Exemplo prático da estrutura completa:</h3>
+  <div class="example-box">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bem-vindo ao meu site&lt;/h1&gt;
+    &lt;p&gt;Esse é o parágrafo que o usuário vai ver.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+  </div>
+  <p class="caption">☝️ Esse exemplo já é uma estrutura HTML válida e funcional.</p>
+
+  <h3>🤔 Por que seguir essa estrutura?</h3>
+  <p>
+    Porque é a forma que os navegadores entendem, que os motores de busca indexam e que os desenvolvedores seguem como padrão. Isso garante que o seu site seja compatível, rápido e fácil de manter — além de estar pronto para receber novos recursos quando precisar evoluir.
+  </p>
+
+  <h3>🚀 Quer destacar os elementos principais?</h3>
+  <p>
+    Clique no botão abaixo para destacar as partes que formam a estrutura básica do HTML e ver, visualmente, o que dá sustentação ao seu site:
+  </p>
+
+  <button class="highlight-btn" id="highlight-tags">Destacar elementos principais</button>
+
+  <script>
+    const btn = document.getElementById('highlight-tags');
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#editorial-html-structure code').forEach(code => {
+        code.classList.toggle('highlight');
+      });
+    });
+  </script>
+  </section>
